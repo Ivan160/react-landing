@@ -1,0 +1,49 @@
+{
+  "ts-node": {
+    "transpileOnly": true,
+    "require": [
+      "ts-node/register",
+      "tsconfig-paths/register",
+    ]
+  },
+  "include": [
+    "./declarations.d.ts",
+    "./config/**/*",
+    "./src/**/*",
+    "./*.ts"
+  ],
+  "compilerOptions": {
+    "outDir": "./build",
+    "baseUrl": ".",
+    "sourceRoot": "/",
+    "target": "ESNext",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "jsx": "react",
+    "allowJs": true,
+    "sourceMap": true,
+    "preserveConstEnums": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "config/*": ["config/*"],
+      "src/*": ["src/*"],
+      "api/*": ["src/api/*"],
+      "assets/*": ["src/assets/*"],
+      "core/*": ["src/core/*"],
+      "modules/*": ["src/modules/*"],
+      "shared/*": ["src/shared/*"],
+      "lodash": ["lodash-es"]
+    },
+    "plugins": [
+      {
+        "transform": "typescript-loadable-components-plugin"
+      }
+    ],
+    "lib": ["DOM", "DOM.Iterable", "ES2020"]
+  }
+}

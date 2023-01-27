@@ -1,0 +1,157 @@
+:root {
+  --BaseFontSize: 16px;
+
+  --FontFamily:
+    'CircularStd',
+    helvetica,
+    arial,
+    -apple-system,
+    system-ui,
+    blinkmacsystemfont,
+    'Segoe UI',
+    'Helvetica Neue',
+    sans-serif;
+
+  --FontWeight-Bold: 700;
+  --FontWeight-Medium: 500;
+  --FontWeight-Light: 400;
+}
+
+
+html {
+  box-sizing: border-box;
+
+  color: black;
+  fill: black;
+
+  font-family: var(--FontFamily);
+  font-size: var(--BaseFontSize);
+  font-weight: var(--FontWeight-Regular);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+
+html, body, #root {
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  flex-grow: 1;
+  flex-direction: column;
+  background-color: white;
+}
+
+
+button {
+  overflow: visible;
+
+  width: auto;
+  padding: 0;
+  margin: 0;
+
+  cursor: pointer;
+
+  color: inherit;
+  border: none;
+  outline: none;
+  background: none;
+
+  font: inherit;
+  line-height: normal;
+
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  appearance: none;
+}
+
+input, textarea {
+  outline: none;
+  font-weight: var(--FontWeight-Regular);
+}
+
+a {
+  text-decoration: none;
+  color: var(--FontWeight-Bold);
+}
+
+body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset, img, abbr {
+  border: 0;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: inherit;
+  font-weight: inherit;
+}
+ul li {
+  list-style: none;
+}
+caption, th {
+  text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+legend {
+  color: #000;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}

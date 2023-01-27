@@ -1,0 +1,14 @@
+$mont-fonts: (
+  CircularStd-Book: 400,
+  CircularStd-Medium: 500,
+  CircularStd-Bold: 700,
+);
+
+@each $name, $weight in $mont-fonts {
+  @font-face {
+    font-family: 'CircularStd';
+    font-weight: $weight;
+    font-style: normal;
+    src: local('CircularStd'), url('assets/fonts/#{$name}.otf') format('opentype');
+  }
+}
